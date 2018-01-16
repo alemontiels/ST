@@ -1,13 +1,4 @@
-# SuperZIP demo
+# Suitability
+The Suitability (ST) tool identifies optimal locations for a specific activity within a city. The tool is mainly based in geographic information systems and multicriteria analysis. ST simplifies the evaluation process of the current status of neighbourhoods across a city, based on the availability of infrastructure, urban equipment and the distance to services and amenities. The tool is flexible and adaptable to different resolutions, including neighbourhood level and urban-block level. Additionally, the tool is enabled to filter out results by category, such as land use or locations prone natural disasters and to choose the assessment criteria for each layer. Possible applications for the tool include mapping infrastructure-gap hotspots, identifying optimal locations for social housing and strategic investment-funds allocation, between others.
 
-See a version of it live at http://shiny.rstudio.com/gallery/superzip-example.html
-
-You can run this demo with:
-```
-if (!require(devtools))
-  install.packages("devtools")
-devtools::install_github("rstudio/leaflet")
-shiny::runGitHub("rstudio/shiny-examples", subdir="063-superzip-example")
-```
-
-Data compiled for _Coming Apart: The State of White America, 1960–2010_ by Charles Murray (Crown Forum, 2012). This app was inspired by the Washington Post's interactive feature _[Washington: A world apart](http://www.washingtonpost.com/sf/local/2013/11/09/washington-a-world-apart/)_.
+This version is strongly based on the SuperZIP demo. Read more about SuperZIP here: http://shiny.rstudio.com/gallery/superzip-example.html
