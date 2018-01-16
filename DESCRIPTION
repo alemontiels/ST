@@ -1,7 +1,7 @@
-Title: SuperZip example
+Title: ST (based on SuperZip example)
 License: MIT
 DisplayMode: Normal
-Author: Joe Cheng <joe@rstudio.com>
-AuthorUrl: http://www.rstudio.com/
+Author: Alejandra Montiel <amontiel@capitalsustentable.com.mx>
+AuthorUrl: http://capitalsustentable.com/
 Type: Shiny
-Tags: leaflet selectize datatables absolutepanel
+Tags: leaflet
