@@ -1,0 +1,12 @@
+name: Visualization
+title: Visualization
+username:
+account: histograma
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 257051
+bundleId: 1177110
+url: https://capsus.shinyapps.io/Visualization/
+when: 1516038529.25733
+asMultiple: FALSE
+asStatic: FALSE
