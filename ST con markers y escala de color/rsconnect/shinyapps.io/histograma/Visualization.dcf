@@ -1,0 +1,13 @@
+name: Visualization
+title: Visualization
+username:
+account: histograma
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 257051
+bundleId: 1190644
+url: https://capsus.shinyapps.io/Visualization/
+when: 1516802852.57096
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: para_revisar_los_Datos.xlsx|revisarallzipes.csv|server_con_markers.txt|www/hospblack.png
