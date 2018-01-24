@@ -1,4 +1,4 @@
 # Suitability
 The Suitability (ST) tool identifies optimal locations for a specific activity within a city. The tool is mainly based in geographic information systems and multicriteria analysis. ST simplifies the evaluation process of the current status of neighbourhoods across a city, based on the availability of infrastructure, urban equipment and the distance to services and amenities. The tool is flexible and adaptable to different resolutions, including neighbourhood level and urban-block level. Additionally, the tool is enabled to filter out results by category, such as land use or locations prone natural disasters and to choose the assessment criteria for each layer. Possible applications for the tool include mapping infrastructure-gap hotspots, identifying optimal locations for social housing and strategic investment-funds allocation, between others.
 
-This version is strongly based on the SuperZIP demo. Read more about SuperZIP here: http://shiny.rstudio.com/gallery/superzip-example.html
+
