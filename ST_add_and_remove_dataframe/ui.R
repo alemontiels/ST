@@ -1,0 +1,160 @@
+#library(leaflet)
+library(shiny)
+
+#datf <- data.frame(longitude = 10.5, latitude = 48)
+
+navbarPage(inverse=TRUE,title=div(img(src="capsus.png", height=30, width=80,align="center")), id="nav",
+  
+           tabPanel(strong("Map",style = "color:Orange"),
+    div(class="outer",
+
+      tags$head(
+        # Include our custom CSS
+        includeCSS("styles.css"),
+        includeScript("gomap.js")
+      ),
+
+      # If not using custom CSS, set height of leafletOutput to a number instead of percent
+      leafletOutput("map", width="150%", height="100%"),
+
+      # Shiny versions prior to 0.11 should use class = "modal" instead.
+      absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
+        draggable = TRUE, top = 70, left = 20, right = "auto", bottom ="auto",
+        width = 300, height = "auto",
+
+    HTML ('<h5><strong> <p align="center">Health sector</p></strong></h5>'),
+ 
+      #Types of map
+      # selectInput("bmap", "Map Type:", choices = c("Stamen.Toner", 
+       #                                                          "CartoDB.Positron",
+        #                                                         "Esri.WorldImagery",
+         #                                                        "Hydda.Full",
+          #                                                       "Stamen.Watercolor"), 
+       #selected = "CartoDB.Positron"),
+    # actionButton("update", "Update Map"),
+    selectInput("providerName","Tile set", c("Stamen.Toner",
+                                             "CartoDB.Positron",
+                                             "Hydda.Full",
+                                             "Esri.WorldImagery",
+                                             "Stamen.Watercolor")),
+      
+    # Para agregar y borrar marcadores de Hospitales
+      HTML ('<h5><strong> <p align="center">Add and Clear markers</p></strong></h5>'),
+      
+  #  checkboxInput("addMarker", "Add new hospital"),
+    textInput(inputId = "id", label = "id", value = 50),
+    textInput(inputId = "lat", label = "Latitud", value = -8.64558),
+    textInput(inputId = "lon", label = "Longitude", value = 115.25942),
+    selectInput("exist", "choose", choices = c(FALSE, TRUE)),
+    actionButton("add", "Add attractor"), 
+    actionButton("remove", "Remove attractor"),
+    actionButton("clearMarkers", "Clear all markers"),
+      
+      strong(textOutput("message"))
+      
+    ),
+    
+
+      tags$div(id="cite",
+        '    Data compiled for ', tags$em('Denpasar, Indonesia, 2018')
+      )
+    )
+  ),
+
+  tabPanel(strong("Data table"), dataTableOutput("tabledata")),
+  
+  navbarMenu(strong("More"), icon = icon("save"),
+             #tabPanel("Text", icon = icon("save")),
+             tabPanel("Uploading files",
+                      titlePanel("Uploading Files"),
+                      
+                      # Sidebar layout with input and output definitions ----
+                      sidebarLayout(
+                        
+                        # Sidebar panel for inputs ----
+                        sidebarPanel(
+                          
+                          # Input: Select a file ----
+                          fileInput("file1", "Choose CSV File",
+                                    multiple = TRUE,
+                                    accept = c("text/csv",
+                                               "text/comma-separated-values,text/plain",
+                                               ".csv")),
+                          
+                          # Horizontal line ----
+                          tags$hr(),
+                          
+                          # Input: Checkbox if file has header ----
+                          checkboxInput("header", "Header", TRUE),
+                          
+                          # Input: Select separator ----
+                          radioButtons("sep", "Separator",
+                                       choices = c(Comma = ",",
+                                                   Semicolon = ";",
+                                                   Tab = "\t"),
+                                       selected = ","),
+                          
+                          # Input: Select quotes ----
+                          radioButtons("quote", "Quote",
+                                       choices = c(None = "",
+                                                   "Double Quote" = '"',
+                                                   "Single Quote" = "'"),
+                                       selected = '"'),
+                          
+                          # Horizontal line ----
+                          tags$hr(),
+                          
+                          # Input: Select number of rows to display ----
+                          radioButtons("disp", "Display",
+                                       choices = c(Head = "head",
+                                                   All = "all"),
+                                       selected = "head")
+                          
+                        ),
+                        
+                        # Main panel for displaying outputs ----
+                        mainPanel(
+                          
+                          # Output: Data file ----
+                          tableOutput("contents")
+                          
+                        )
+                        
+                      )
+             
+             ),
+             
+             tabPanel("Downloading data",
+                      titlePanel("Downloading Data"),
+                      
+                      # Sidebar layout with input and output definitions ----
+                      sidebarLayout(
+                        
+                        # Sidebar panel for inputs ----
+                        sidebarPanel(
+                          
+                          # Input: Choose dataset ----
+                          selectInput("dataset", "Choose a dataset:",
+                                      choices = c("Datos de superzip en EUA")),
+                          
+                          # Button
+                          downloadButton("downloadData", "Download")
+                          
+                        ),
+                        
+                        # Main panel for displaying outputs ----
+                        mainPanel(
+                          
+                          tableOutput("table")
+                          
+                        )
+                        
+                      )
+                      
+                      
+                      )
+             ),
+  
+  
+  conditionalPanel("false", icon("crosshair")) #eliminar
+)
