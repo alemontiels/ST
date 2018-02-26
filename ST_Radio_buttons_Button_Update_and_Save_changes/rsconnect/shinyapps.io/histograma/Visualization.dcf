@@ -1,0 +1,13 @@
+name: Visualization
+title: Visualization
+username:
+account: histograma
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 257051
+bundleId: 1237694
+url: https://capsus.shinyapps.io/Visualization/
+when: 1519452750.11848
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: chooses_mis_funciones_6_febrero.txt|functions_mis_funciones_6_febrero.txt|globar_mis_funciones_6_febrero.txt|PASS.txt|pin_blue.png|pin_green.png|server_25_enero.txt|server_con_add_markers_mis_funciones_6_febrero.txt|server_con_markers.txt|ui_mis_funciones_6_febrero.txt|www/hospblack.png
