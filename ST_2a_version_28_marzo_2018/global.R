@@ -1,0 +1,32 @@
+library(stats)
+library(Matrix)
+library(base)
+library(shiny)
+library(leaflet)
+library(RColorBrewer)
+library(shinythemes)
+library(scales)
+library(curl)
+library(lattice)
+#library(rsconnect)
+library(shinyBS)
+library(data.table)
+library (sp)
+library (htmltools)
+library(ggmap)
+library(fmsb)
+library(reshape2)
+library(ggplot2)
+library(plotly)
+library(rhandsontable)
+
+source("functions.R")
+
+datf <- data.frame(longitude = 115.2166672, latitude = -8.6499996, exist= TRUE)
+
+#iconify <- function(list.of.logical){
+#  list.of.urls <- gsub(pattern="TRUE", replacement="hosp_true.png", x=as.character(list.of.logical))
+#  list.of.urls <- gsub(pattern="FALSE", replacement="hospital_false.png", x=list.of.urls)
+#  cute.icons <- list(iconUrl = list.of.urls, iconSize = c(26, 27))
+#  return(cute.icons)
+#}

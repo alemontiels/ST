@@ -1,0 +1,13 @@
+name: Visualization
+title: Visualization
+username:
+account: histograma
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 257051
+bundleId: 1294438
+url: https://capsus.shinyapps.io/Visualization/
+when: 1522373503.14845
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|reactive_table.R|README.md|Denpasar con la reticula/config.csv|Denpasar con la reticula/filters.csv|Denpasar con la reticula/values.csv|Semarang con la reticula/config.csv|Semarang con la reticula/filters.csv|Semarang con la reticula/values.csv
